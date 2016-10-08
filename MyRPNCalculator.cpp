@@ -8,7 +8,7 @@ using namespace std;
 
 #include "Stack.h"
 
-int main2(){
+int main(){
   Stack<string> mainStack;
   string input = "";
   Stack<string> stackDup;
