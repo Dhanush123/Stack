@@ -26,6 +26,7 @@ class Stack
   void clear() {siz = 0;} //tested
   ~Stack(){delete [] values;}
   Stack<V>& operator=(const Stack<V>&);
+  Stack(const Stack<V>&);
 };
 
 template <typename V>
@@ -57,6 +58,17 @@ Stack<V>& Stack<V>::operator=(const Stack<V>& original)
     }
   }
   return *this; // return self reference
+}
+
+template <typename V>
+Stack<V>::Stack(const Stack<V>& original)
+{
+  siz = original.siz; //still copy
+  cap = original.cap; // still copy
+  values = new V[cap]; // not copy, is new
+  for (int i = 0; i < cap; i++){ // contents copy original to new
+    values[i] = original.values[i];
+  }
 }
 
 
