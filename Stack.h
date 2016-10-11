@@ -25,8 +25,8 @@ class Stack
   bool empty() const {return siz==0;} //tested
   void clear() {siz = 0;} //tested
   ~Stack(){delete [] values;}
-  Stack<V>& operator=(const Stack<V>&);
-  Stack(const Stack<V>&);
+  Stack<V>& operator=(const Stack<V>&); //tested
+  Stack(const Stack<V>&); //tested
 };
 
 template <typename V>
